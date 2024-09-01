@@ -1,5 +1,6 @@
 # silverstripe-symlinktask
- Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in `composer.json` files. Useful for environments where command-line access is restricted or unavailable.
+ Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in `composer.json` files. 
+ Useful for environments where command-line access is restricted or unavailable.
  
  
  
@@ -9,7 +10,7 @@
 
 ## Installation
 
-Installation is supported via composer only
+You can install the module via Composer:
 
 ```sh
 
@@ -17,9 +18,18 @@ composer require seppzzz/silverstripe-symlinktask
 
 ```
 
+Alternatively, you can download the .zip file from GitHub, 
+extract it, 
+rename the extracted folder to silverstripe-symlinktask, and copy it to your vendor/seppzzz/ directory.
+
+
 ## Documentation
 
 
-just browse to yoursite.com/dev/tasks/CreateSymlinks
+To create the symlinks, navigate to:
 
+```sh
 
+yoursite.com/dev/tasks/CreateSymlinks
+
+```
