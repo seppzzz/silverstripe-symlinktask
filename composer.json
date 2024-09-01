@@ -1,6 +1,6 @@
 {
     "name": "seppzzz/silverstripe-symlinktask",
-    "description": "Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in `composer.json` files. Useful for environments where command-line access is restricted or unavailable.",
+    "description": "Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in composer.json files. Useful for environments where command-line access is restricted or unavailable.",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
@@ -16,16 +16,14 @@
         }
     ],
     "license": "BSD-3-Clause",
-		"extra": {
-    		"license": "see LICENSE file"
-		},
     "require": {
         "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "~4.13.0@stable",
-        "silverstripe/login-forms": "~4.9.0@stable"
+        "silverstripe/recipe-cms": "^4.0 || ^5.0",  // Support SilverStripe 4 and 5
+        "silverstripe/login-forms": "^4.9 || ^5.0", // Support relevant modules for SS4 and SS5
+        "php": "^7.2 || ^8.0" // Compatible with PHP 7.2 and up, including PHP 8
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5"  // Compatible with PHPUnit for PHP 7.2 and 8.x
     },
     "autoload": {
         "psr-4": {
@@ -37,6 +35,6 @@
             "client/dist"
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",  // Use stable dependencies
     "prefer-stable": true
 }

@@ -6,9 +6,11 @@
  
  
  
- ## Requirements
+## Requirements
 
-- SilverStripe 4 (tested with 4.13 )
+SilverStripe 4 or 5 (tested with 4.13)
+PHP 7.2 or higher
+
 
 ## Installation
 
