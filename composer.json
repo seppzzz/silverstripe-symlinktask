@@ -15,9 +15,9 @@
             "email": "seppzzz@till.graphics"
         }
     ],
-    "license": "Custom",
+    "license": "BSD-3-Clause",
 		"extra": {
-    		"license": "Custom License - see LICENSE file"
+    		"license": "see LICENSE file"
 		},
     "require": {
         "silverstripe/recipe-plugin": "^1.2",
