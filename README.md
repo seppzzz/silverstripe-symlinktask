@@ -20,7 +20,8 @@ composer require seppzzz/silverstripe-symlinktask
 
 ```
 
-Alternatively, you can download the .zip file from GitHub, extract it, rename the extracted folder to "silverstripe-symlinktask", and copy it to your vendor/seppzzz/ directory.
+Alternatively, you can download the `.zip file` from GitHub, extract it, rename the extracted folder to `silverstripe-symlinktask`, 
+and copy it to your `vendor/seppzzz/` directory.
 
 After installation, run the following command to rebuild your SilverStripe project:
 
