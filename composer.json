@@ -1,0 +1,42 @@
+{
+    "name": "seppzzz/silverstripe-symlinktask",
+    "description": "Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in `composer.json` files. Useful for environments where command-line access is restricted or unavailable.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS",
+        "seppzzz",
+        "symlinks",
+        "build-task"
+    ],
+    "authors": [
+        {
+            "name": "seppzzz",
+            "email": "seppzzz@till.graphics"
+        }
+    ],
+    "license": "Custom",
+		"extra": {
+    		"license": "Custom License - see LICENSE file"
+		},
+    "require": {
+        "silverstripe/recipe-plugin": "^1.2",
+        "silverstripe/recipe-cms": "~4.13.0@stable",
+        "silverstripe/login-forms": "~4.9.0@stable"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seppzzz\\SilverstripeSymlinkTask\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client/dist"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

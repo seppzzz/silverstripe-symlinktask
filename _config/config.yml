@@ -1,0 +1,10 @@
+---
+Name: silverstripe-symlinktask-config
+After: '#coreextensions'
+---
+
+
+SilverStripe\Core\Manifest\ModuleLoader:
+  extra:
+    expose:
+      - public/_resources/vendor
