@@ -1,6 +1,8 @@
 # silverstripe-symlinktask
- Provides a Silverstripe BuildTask for creating symlinks to exposed resources defined in `composer.json` files. 
- Useful for environments where command-line access is restricted or unavailable.
+
+ Provides a Silverstripe `BuildTask` for creating symlinks to exposed resources defined in `composer.json` files. 
+ This task replicates the functionality of the `composer vendor-expose` command, 
+ making it useful for environments where command-line access is restricted or unavailable.
  
  
  
