@@ -35,6 +35,6 @@
             "client/dist"
         ]
     },
-    "minimum-stability": "stable",  // Use stable dependencies
+    "minimum-stability": "stable", 
     "prefer-stable": true
 }
