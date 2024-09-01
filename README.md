@@ -33,6 +33,15 @@ dev/build
 
 
 
+After installation, run the following command to rebuild your SilverStripe project:
+
+```sh
+
+dev/build
+
+```
+
+
 ## Documentation
 
 
