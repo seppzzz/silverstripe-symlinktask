@@ -4,6 +4,12 @@
  This task replicates the functionality of the `composer vendor-expose` command, 
  making it useful for environments where command-line access is restricted or unavailable.
  
+## Compatibility
+
+| SilverStripe version | Branch               |
+|----------------------|----------------------|
+| 4.x / 5.x            | `silverstripe-4-5`   |
+| 6.x                  | `main`               |
  
  
 ## Requirements
