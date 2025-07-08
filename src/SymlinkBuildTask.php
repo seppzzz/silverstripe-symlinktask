@@ -4,16 +4,23 @@ namespace Seppzzz\SymlinkTask;
 
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\Core\Config\Configurable;
+use Symfony\Component\Console\Input\InputInterface;
+use SilverStripe\PolyExecution\PolyOutput;
 
 class SymlinkBuildTask extends BuildTask {
 
 	use Configurable;
 
-	private static $segment = 'CreateSymlinks';
-	protected $title = 'Create Symlinks for Exposed Resources';
-	protected $description = 'This task creates symlinks for exposed resources as defined in composer.json files.';
+	public static string $segment = 'CreateSymlinks';
+	public string $title = 'Create Symlinks for Exposed Resources';
+	public static string $description = 'This task creates symlinks for exposed resources as defined in composer.json files.';
+	
+	
+	private function lineBreak():string {
+		return isset($_SERVER['HTTP_HOST']) ? "<br>" : PHP_EOL;
+	}
 
-	public function run($request) {
+	public function execute(InputInterface $input, PolyOutput $output): int {
 		// Define the directories to search
 		$directories = [
 			'vendor' => BASE_PATH . '/vendor',
@@ -102,10 +109,17 @@ class SymlinkBuildTask extends BuildTask {
 		// Combine the outputs with a separator
 		$vendorSeperator = $outputVendor != "" ? "VENDOR:\n" : "";
 		$themesSeperator = $outputVendor != "" ? "THEMES:\n" : "";
-		$output = $vendorSeperator . $outputVendor. "\n" . $themesSeperator . $outputThemes;
+		$finalOutput = $vendorSeperator . $outputVendor. "\n" . $themesSeperator . $outputThemes;
 
 		// Output the results
-		echo nl2br($output);
+		if(isset($_SERVER['HTTP_HOST'])) {
+			// Browser
+			echo nl2br($finalOutput);
+		} else {
+			// CLI
+			$output->write($finalOutput);
+		}
+		return 0;
 	}
 
 	private function processComposerFile($directory, &$packages, $type) {
